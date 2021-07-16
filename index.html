@@ -26,6 +26,68 @@ h1 {
 	background: white;
 }
 
+header h1:first-child {
+  opacity: 0;
+  animation: 2s fade-in forwards;
+}
+
+header h1:nth-child(2) {
+  opacity: 0;
+  animation: .5s fade-in 3s forwards;
+}
+
+#content {
+  opacity: 0;
+  animation: .5s fade-in 5s forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
+
+input[type="checkbox"], input[type="radio"] {
+  display: none;
+}
+.label-toggle {
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.label-toggle::before {
+  content: " ";
+  display: inline-block;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: 0.7rem;
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-out;
+}
+.toggle:checked + .label-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.35s ease-in-out;
+}
+.toggle:checked + .label-toggle + .collapsible-content {
+  max-height: 100rem;
+}
+
 @media screen and (max-width: 1008px) {
 	html, body {
 		margin: 0;
@@ -39,62 +101,83 @@ h1 {
 <body>
 
 <div id="document">
+  <header>
+    <h1>What happens when an organization succumbs to bureaucracy?</h1>
+    <h1>NOTHING!</h1>
+  </header>
+  <div id="content">
+    <p>Sometimes shadow gets in the way of keeping our agreements. When this happens, we’re here to help by offering support accountability.</p>
 
-	<h1>What happens when an organization succumbs to bureaucracy?</h1>
+    <input id="section-1" class="toggle" type="checkbox">
+    <label for="section-1" class="label-toggle">Selling but not delivering</label>
+    <div class="collapsible-content">
+      <div class="content-inner">
+        <p><strong>What was the agreement?</strong> In 2015, MKPUSA proposed unification with separate regions in the US. Prior to unification, MKPUSA specifically represented that the change was primarily administrative in nature and would not change “[Intermountain’s] ability to decide when and where we hold NWTAs and other MKP related trainings.”</p>
 
-	<h1>NOTHING!</h1>
-	
-	<p>Sometimes shadow gets in the way of keeping our agreements. When this happens, we’re here to help by offering support accountability.</p>
+        <p><strong>Did MKPUSA keep the agreement?</strong> No. MKPUSA sold one thing (“primarily an administrative change”) and delivered something else entirely.</p>
 
-	<h2>Selling but not delivering</h2>
+        <p><strong>What did MKPUSA make more important?</strong> MKPUSA apparently decided that as a body it is authorized to act (and has acted) as gatekeeper of the NWTA and has accordingly usurped authority that was specifically promised to remain with Intermountain.</p>
 
-	<p><strong>What was the agreement?</strong> In 2015, MKPUSA proposed unification with separate regions in the US. Prior to unification, MKPUSA specifically represented that the change was administrative in nature and would not change “[Intermountain’s] ability to decide when and where we hold NWTAs and other MKP related trainings.”</p>
+        <p><strong>What has been the impact on MKPUSA?</strong> MKPUSA has lost the trust of many Intermountain men.</p>
 
-	<p><strong>Did MKPUSA keep the agreement?</strong> No. MKPUSA sold one thing (“primarily an administrative change”) and delivered something else entirely.</p>
+        <p><strong>What has been the impact on Intermountain?</strong> The men of Intermountain have been placed in the position of requesting permission to hold an NWTA. They have done their homework. By a 93% majority, they have <a href="/proposal-combined-pdf">proposed</a>
+ to move forward with a vaccinated weekend. MKPUSA has acknowledged but has not responded to their request. Thus, the men of Intermountain have not been able to plan their NWTA and increasingly question the ability and relevance of MKPUSA in leading men’s work.</p>
 
-	<p><strong>What did MKPUSA make more important?</strong> MKPUSA apparently decided that as a body it is authorized to act (and has acted) as gatekeeper of the NWTA and has accordingly usurped authority that was specifically promised to remain with Intermountain.</p>
+        <p>To read more about how unification was represented, click <a href="/unification-overview.pdf">here</a></p>
+      </div>
+    </div>
 
-	<p><strong>What has been the impact on MKPUSA?</strong> MKPUSA has lost the trust of many Intermountain men.</p>
+    <input id="section-2" class="toggle" type="checkbox">
+    <label for="section-2" class="label-toggle">Abdicating instead of advancing</label>
+    <div class="collapsible-content">
+      <div class="content-inner">
+        <p><strong>What was the agreement?</strong> MKPUSA has an implicit agreement with its stakeholders to advance men’s work (or at the very least, to not thwart it).</p>
 
-	<p><strong>What has been the impact on Intermountain?</strong> The men of Intermountain have been placed in the position of requesting permission to hold an NWTA. And notwithstanding a viable consensus to move forward with a vaccinated weekend, MKPUSA has not responded to the request. Thus, the men of Intermountain have not been able to plan their NWTA and increasingly question the ability and relevance of MKPUSA in leading men’s work.</p>
+        <p><strong>Did MKPUSA keep the agreement?</strong> No. Although men’s work can safely continue according to Intermountain health professionals and CDC guidelines, MKPUSA has chosen to wrest local control of the NWTA in direct contradiction of promises made during the process of unification.</p>
 
-	<h2>Abdicating instead of advancing</h2>
+        <p><strong>What has been the impact on MKPUSA?</strong> Under current leadership, MKPUSA is fading in importance, effectiveness, and relevance.</p>
 
-	<p><strong>What was the agreement?</strong> MKPUSA has an implicit agreement with its stakeholders to advance men’s work (or at the very least, to not prevent it).</p>
+        <p><strong>What has been the impact on men?</strong> Without the hope embodied by men’s work, men are left to their addictions, their shadows, and themselves. In some cases men are left without hope, and some lose their lives.</p>
+      </div>
+    </div>
 
-	<p><strong>Did MKPUSA keep the agreement?</strong> No. Although men’s work can safely continue according to Intermountain health professionals and CDC guidelines, MKPUSA has chosen to wrest local control of the NWTA in direct contradiction of promises made during the process of unification.</p>
+    <input id="section-3" class="toggle" type="checkbox">
+    <label for="section-3" class="label-toggle">Preaching but not practicing</label>
+    <div class="collapsible-content">
+      <div class="content-inner">
+        <p><strong>What was the agreement?</strong> In August 2015, MKPUSA formally adopted Holacracy as its operating structure and governing paradigm.</p>
 
-	<p><strong>What has been the impact on MKPUSA?</strong> Under current leadership, MKPUSA is fading in importance, effectiveness, and relevance.</p>
+        <p><strong>Did MKPUSA keep the agreement?</strong> No. According to its website, Holacracy “is a management practice for the modern era. It embraces our individual humanity, autonomy, and creative problem-solving capacities.” MKPUSA’s actions in wresting local control of the NWTA are in direct contradiction of Holacracy’s embrace of autonomy and creative problem-solving.</p>
 
-	<p><strong>What has been the impact on men?</strong> Without the hope embodied by men’s work, men are left to their addictions, their shadows, and themselves. In some cases men are left without hope, and some lose their lives.</p>
+        <p><strong>Core Holacracy value: Clarity:</strong> “Holacracy practice enables clear expectations and creates transparent authority at every level. Hidden power dynamics get surfaced and resolved. Everyone is bound by the same rules.”</p>
 
-	<h2>Preaching but not practicing</h2>
+        <p><strong>Did MKPUSA keep this agreement?</strong> No. Governance of MKPUSA and the role of the North American Leader Body (NALB) have both changed without significant communication to the regions now comprising MKPUSA, much less solicitation of input from the same.</p>
 
-	<p><strong>What was the agreement?</strong> In August 2015, MKPUSA formally adopted Holacracy as its operating structure and governing paradigm.</p>
+        <p><strong>What has been the impact on MKPUSA?</strong> The opacity of MKPUSA has made this difficult to determine from a distance.</p>
 
-	<p><strong>Did MKPUSA keep the agreement?</strong> No. According to its website, Holacracy “is a management practice for the modern era. It embraces our individual humanity, autonomy, and creative problem-solving capacities.” MKPUSA’s actions in wresting local control of the NWTA are in direct contradiction of Holacracy’s embrace of autonomy and creative problem-solving.</p>
+        <p><strong>What has been the impact on the larger MKP community?</strong> Men are left without data and transparency, and MKPUSA is left without visible accountability to its constituent stakeholders. “That which we will not illuminate” is the simplest definition of “shadow.”</p>
+      </div>
+    </div>
 
-	<p><strong>Core Holacracy value: Clarity:</strong> “Holacracy practice enables clear expectations and creates transparent authority at every level. Hidden power dynamics get surfaced and resolved. Everyone is bound by the same rules.”</p>
+    <input id="section-4" class="toggle" type="checkbox">
+    <label for="section-4" class="label-toggle">What do we want?</label>
+    <div class="collapsible-content">
+      <div class="content-inner">
+        <p>We call on MKPUSA to immediately return control of the NWTA to the local regions from which it was wrongly usurped. The representations made in documents circulated around the time of unification are illustrative of intent and binding on the process.</p>
 
-	<p><strong>Did MKPUSA keep this agreement?</strong> No. Governance of MKPUSA and the role of the North American Leader Body (NALB) have both changed without significant communication to the regions now comprising MKPUSA, much less solicitation of input from the same.</p>
+        <p>We call on MKPUSA to govern itself according to the principles espoused by Holacracy: to be transparent with organizational changes, to seek active input and representation from constituent stakeholders, and to act with the same integrity and accountability taught in our program offerings.</p>
 
-	<p><strong>What has been the impact on MKPUSA?</strong> The opacity of MKPUSA has made this difficult to determine from a distance.</p>
+        <p>In the absence of immediate improvement, all options are on the table:</p>
 
-	<p><strong>What has been the impact on the larger MKP community?</strong> Men are left without data and transparency, and MKPUSA is left without visible accountability to its constituent stakeholders. “That which we cannot see” is the simplest definition of “shadow.”</p>
+          <ul>
+            <li>Separating from MKPUSA, merging with other regions, and seeking intellectual property from Project founders.</li>
+            <li>Arbitration through a third party.</li>
+            <li>Litigation.</li>
+          </ul>
+      </div>
+    </div>
 
-	<h2>What do we want?</h2>
-
-	<p>We call on MKPUSA to immediately return control of the NWTA to the local regions from which it was wrongly usurped. The representations made in documents circulated around the time of unification are illustrative of intent and binding on the process.</p>
-
-	<p>We call on MKPUSA to govern itself according to the principles espoused by Holacracy: to be transparent with organizational changes, to seek active input and representation from constituent stakeholders, and to act with the same integrity and accountability taught in our program offerings.</p>
-
-	<p>In the absence of immediate improvement, all options are on the table:</p>
-
-	<ul>
-		<li>Separating from MKPUSA, merging with other regions, and seeking intellectual property from Project founders.</li>
-		<li>Arbitration through a third party.</li>
-		<li>Litigation.</li>
-	</ul>
+  </div>
 
 </div>
 </body>
