@@ -74,6 +74,15 @@
       text-align: center;
     }
 
+    .flex-row {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .flex-row > * {
+      max-width: 50%;
+    }
+
     @media screen and (max-width: 1008px) {
 
       html,
@@ -420,8 +429,10 @@
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdMZfvtpjeESslV-Pz7WVAhorteS9Ie4_3TlXvImrVVU7DRcQ/viewform?embedded=true" width="640" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
       </div>
 
-      <p>Contributions needed and welcome! Donations will increase visibility of this effort by funding a Google Adwords campaign to list this site at or near the top of a Google search for the ManKind Project or MKPUSA. Funds remaining after conclusion of this effort will be held in reserve for the NWTA general scholarship fund.</p>
-      <img src="rhpeterson-venmo.png">
+      <div class="flex-row">
+        <img src="rhpeterson-venmo.png">
+        <p>Contributions needed and welcome! Donations will increase visibility of this effort by funding a Google Adwords campaign to list this site at or near the top of a Google search for the ManKind Project or MKPUSA. Funds remaining after conclusion of this effort will be held in reserve for the NWTA general scholarship fund.</p>
+      </div>
 
       <hr />
 
