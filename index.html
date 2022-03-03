@@ -71,7 +71,7 @@
     }
 
     .container {
-      margin: 0 auto;
+      margin: 0 auto 2em;
       width: fit-content;
     }
 
@@ -84,8 +84,21 @@
       flex-direction: row;
     }
 
-    .flex-row>* {
-      max-width: 50%;
+    .flex-justify-center {
+      justify-content: center;
+    }
+
+    .venmo {
+      max-width: 20rem;
+    }
+
+    .card {
+      margin: 0;
+      width: auto;
+      background: white;
+      padding: .5em;
+      border-radius: .2em;
+      box-shadow: 0 0.2em 0.3em -0.15em black;
     }
 
     @media screen and (max-width: 1008px) {
@@ -102,7 +115,9 @@
 
 <body>
   <header>
-    <h2 class="center" style="margin: 0;padding-bottom: 1em;">We stand with Ukraine 🇺🇦</h2>
+    <div class="flex-row flex-justify-center">
+      <h2 class="card">We stand with Ukraine 🇺🇦</h2>
+    </div>
     <hr style="margin:0;">
   </header>
   <div id="document">
@@ -408,7 +423,7 @@
         </li>
         <li>
           Actively facilitate men’s work in general (and the NWTA in
-          particular) instead of standing in its way<a id="f3-inline" href="#f3"><sup>3</sup></a>
+          particular) instead of standing in its way<a id="f3-inline" href="#f3"><sup>3</sup></a>,
         </li>
         <li>
           Seek representative input from constituent areas and accord them a
@@ -437,7 +452,7 @@
       </div>
 
       <p class="center"><em>Signatures are meant to convey general support and do not imply 100% agreement with every
-          point listed herein.</em></p>
+          point listed above.</em></p>
 
       <div id="signatures" class="container">
         <iframe
@@ -445,8 +460,8 @@
           width="640" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
       </div>
 
-      <div class="flex-row">
-        <img src="rhpeterson-venmo.png">
+      <div class="flex-row" style="padding:1em">
+        <img class="venmo" src="rhpeterson-venmo.png">
         <p>Contributions needed and welcome! Donations will increase visibility of this effort by funding a Google
           Adwords campaign to list this site at or near the top of a Google search for the ManKind Project or MKPUSA.
           Funds remaining after conclusion of this effort will be held in reserve for the NWTA general scholarship fund.
